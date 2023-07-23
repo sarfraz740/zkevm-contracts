@@ -1,0 +1,161 @@
+npm run deploy:deployer:ZkEVM:sepolia
+
+> @0xpolygonhermez/zkevm-contracts@0.6.0.0 deploy:deployer:ZkEVM:sepolia
+> npx hardhat run deployment/2_deployPolygonZKEVMDeployer.js --network sepolia
+
+#######################
+
+polygonZkEVMDeployer deployed on:  0x9715744eFDB6464df5e164698188eD6c0358DE30
+
+
+npm run verify:deployer:ZkEVM:sepolia
+
+> @0xpolygonhermez/zkevm-contracts@0.6.0.0 verify:deployer:ZkEVM:sepolia
+> npx hardhat run deployment/verifyzkEVMDeployer.js --network sepolia
+
+AssertionError: expected false to equal true
+    at main (C:\projects\zkevm\zkevm-contracts\deployment\verifyzkEVMDeployer.js:28:80)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  showDiff: true,
+  actual: false,
+  expected: true,
+  operator: 'strictEqual'
+}
+
+
+npm run deploy:testnet:ZkEVM:sepolia
+
+> @0xpolygonhermez/zkevm-contracts@0.6.0.0 deploy:testnet:ZkEVM:sepolia
+> npm run prepare:testnet:ZkEVM:sepolia && npm run deploy:ZkEVM:sepolia
+
+
+> @0xpolygonhermez/zkevm-contracts@0.6.0.0 prepare:testnet:ZkEVM:sepolia
+> npx hardhat run deployment/testnet/prepareTestnet.js --network sepolia
+
+Using pvtKey deployer with address:  0xFC00883106e20e34311557a242C634C6A60b3445
+#######################
+
+Matic deployed to: 0x39355d42d14bEC883Ea0E8C8DcfdDe3aab20CF63
+
+> @0xpolygonhermez/zkevm-contracts@0.6.0.0 deploy:ZkEVM:sepolia
+> node deployment/1_createGenesis.js && npx hardhat run deployment/3_deployContracts.js --network sepolia && npm run saveDeployment:sepolia
+
+Warning: Potentially unsafe deployment of contracts/PolygonZkEVMGlobalExitRootL2.sol:PolygonZkEVMGlobalExitRootL2
+
+    You are using the `unsafeAllow.state-variable-immutable` flag.
+
+Warning: Potentially unsafe deployment of contracts/PolygonZkEVMGlobalExitRootL2.sol:PolygonZkEVMGlobalExitRootL2
+
+    You are using the `unsafeAllow.constructor` flag.
+
+Using pvtKey deployer with address:  0xFC00883106e20e34311557a242C634C6A60b3445
+#######################
+
+Verifier deployed to: 0xE6c27ab45Da8A210E8052741fEf97E0821f63E72
+#######################
+
+Proxy admin deployed to: 0x6d7A308a531042EeD12BB7650547E525b1a1BF3d
+#######################
+
+bridge impl deployed to: 0x7313d088009c628649d85152Cc542ba93e257631
+#######################
+
+PolygonZkEVMBridge deployed to: 0xff5b699769179206Ba25A18256896e9c57f15A18
+
+#######################
+#####    Checks PolygonZkEVMBridge   #####
+#######################
+PolygonZkEVMGlobalExitRootAddress: 0xE2B75D3f1eA5913C053b8FAaEA0B760Ba2EDfFd1
+networkID: 0
+zkEVMaddress: 0xC6EBe23eCA8A29bc6C0Df6934eb23bda191886Be
+Warning: Potentially unsafe deployment of contracts/PolygonZkEVMGlobalExitRoot.sol:PolygonZkEVMGlobalExitRoot
+
+    You are using the `unsafeAllow.state-variable-immutable` flag.
+
+Warning: Potentially unsafe deployment of contracts/PolygonZkEVMGlobalExitRoot.sol:PolygonZkEVMGlobalExitRoot
+
+    You are using the `unsafeAllow.constructor` flag.
+
+#######################
+
+polygonZkEVMGlobalExitRoot deployed to: 0xE2B75D3f1eA5913C053b8FAaEA0B760Ba2EDfFd1
+
+#######################
+##### Deployment Polygon ZK-EVM #####
+#######################
+deployer: 0xFC00883106e20e34311557a242C634C6A60b3445
+PolygonZkEVMGlobalExitRootAddress: 0xE2B75D3f1eA5913C053b8FAaEA0B760Ba2EDfFd1
+maticTokenAddress: 0x39355d42d14bEC883Ea0E8C8DcfdDe3aab20CF63
+verifierAddress: 0xE6c27ab45Da8A210E8052741fEf97E0821f63E72
+polygonZkEVMBridgeContract: 0xff5b699769179206Ba25A18256896e9c57f15A18
+admin: 0x617b3a3528F9cDd6630fd3301B9c8911F7Bf063D
+chainID: 1001
+trustedSequencer: 0x617b3a3528F9cDd6630fd3301B9c8911F7Bf063D
+pendingStateTimeout: 604799
+trustedAggregator: 0x617b3a3528F9cDd6630fd3301B9c8911F7Bf063D
+trustedAggregatorTimeout: 604799
+genesisRoot: 0x4de7ea15aac7a79d5636d79eedc3328ea65753465c35f3d2689576d2fc5cb1b0
+trustedSequencerURL: http://zkevm-json-rpc:8123
+networkName: zkevm
+forkID: 1
+Warning: Potentially unsafe deployment of contracts/PolygonZkEVM.sol:PolygonZkEVM
+
+    You are using the `unsafeAllow.state-variable-immutable` flag.
+
+Warning: Potentially unsafe deployment of contracts/PolygonZkEVM.sol:PolygonZkEVM
+
+    You are using the `unsafeAllow.constructor` flag.
+
+#######################
+
+polygonZkEVMContract deployed to: 0xC6EBe23eCA8A29bc6C0Df6934eb23bda191886Be
+
+#######################
+#####    Checks  PolygonZkEVM  #####
+#######################
+PolygonZkEVMGlobalExitRootAddress: 0xE2B75D3f1eA5913C053b8FAaEA0B760Ba2EDfFd1
+maticTokenAddress: 0x39355d42d14bEC883Ea0E8C8DcfdDe3aab20CF63
+verifierAddress: 0xE6c27ab45Da8A210E8052741fEf97E0821f63E72
+polygonZkEVMBridgeContract: 0xff5b699769179206Ba25A18256896e9c57f15A18
+admin: 0x617b3a3528F9cDd6630fd3301B9c8911F7Bf063D
+chainID: BigNumber { value: "1001" }
+trustedSequencer: 0x617b3a3528F9cDd6630fd3301B9c8911F7Bf063D
+pendingStateTimeout: BigNumber { value: "604799" }
+trustedAggregator: 0x617b3a3528F9cDd6630fd3301B9c8911F7Bf063D
+trustedAggregatorTimeout: BigNumber { value: "604799" }
+genesiRoot: 0x4de7ea15aac7a79d5636d79eedc3328ea65753465c35f3d2689576d2fc5cb1b0
+trustedSequencerURL: http://zkevm-json-rpc:8123
+networkName: zkevm
+owner: 0x617b3a3528F9cDd6630fd3301B9c8911F7Bf063D
+forkID: BigNumber { value: "1" }
+
+#######################
+##### Deployment TimelockContract  #####
+#######################
+minDelayTimelock: 3600
+timelockAddress: 0x617b3a3528F9cDd6630fd3301B9c8911F7Bf063D
+zkEVMAddress: 0xC6EBe23eCA8A29bc6C0Df6934eb23bda191886Be
+#######################
+
+Polygon timelockContract deployed to: 0xC11C3c02b54dA84C82bc8D6DD8b3BEaE7c667063
+✔ 0xff5b699769179206Ba25A18256896e9c57f15A18 (transparent) proxy ownership transfered through admin proxy
+✔ 0xE2B75D3f1eA5913C053b8FAaEA0B760Ba2EDfFd1 (transparent) proxy ownership transfered through admin proxy
+✔ 0xC6EBe23eCA8A29bc6C0Df6934eb23bda191886Be (transparent) proxy ownership transfered through admin proxy
+
+#######################
+#####  Checks TimelockContract  #####
+#######################
+minDelayTimelock: BigNumber { value: "3600" }
+polygonZkEVM: 0xC6EBe23eCA8A29bc6C0Df6934eb23bda191886Be
+
+> @0xpolygonhermez/zkevm-contracts@0.6.0.0 saveDeployment:sepolia
+> mkdir -p deployments/sepolia$(date +%s) && cp -r deployment/deploy_*.json deployments/sepolia_$(date +%s) && cp .openzeppelin/sepolia.json deployments/sepolia_$(date +%s) && cp deployment/genesis.json deployments/sepolia_$(date +%s)
+
+The syntax of the command is incorrect.
+
+ npm run saveDeployment:sepolia
+
+> @0xpolygonhermez/zkevm-contracts@0.6.0.0 saveDeployment:sepolia
+> mkdir -p deployments/sepolia_$(date +%s) && cp -r deployment/deploy_*.json deployments/sepolia_$(date +%s) && cp .openzeppelin/sepolia.json deployments/sepolia_$(date +%s) && cp deployment/genesis.json deployments/sepolia_$(date +%s)
+
+The syntax of the command is incorrect.

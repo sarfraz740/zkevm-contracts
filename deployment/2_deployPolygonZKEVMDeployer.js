@@ -59,7 +59,7 @@ async function main() {
     // Deploy PolygonZkEVMDeployer if is not deployed already using keyless deployment
     const [zkEVMDeployerContract, keylessDeployer] = await deployPolygonZkEVMDeployer(initialZkEVMDeployerOwner, deployer);
     if (keylessDeployer === ethers.constants.AddressZero) {
-        console.log('#######################\n');
+        console.log('#######################\n'); 
         console.log('polygonZkEVMDeployer already deployed on: ', zkEVMDeployerContract.address);
     } else {
         console.log('#######################\n');
